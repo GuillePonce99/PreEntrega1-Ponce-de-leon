@@ -1,0 +1,47 @@
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: grey 0px 5px 15px;
+}
+
+.container-fluid {
+    background-color: bisque;
+}
+
+.nav-item {
+    text-align: center;
+    margin: 5px 30px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    background-color: #ffe8cc;
+    border: solid 1px grey;
+}
+.dropdown-item {
+    padding: 0;
+}
+
+
+@media(min-width:992px){
+
+    .nav-item {
+        text-align: center;
+        margin: 15px 30px;
+    }
+    
+    footer .siguenos {
+        margin: 20px 0;
+    }
+
+    .dropdown-item  {
+        text-align: center;
+        margin: 15px auto
+    }
+    
+}

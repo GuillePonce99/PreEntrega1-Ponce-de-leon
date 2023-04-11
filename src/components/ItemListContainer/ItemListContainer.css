@@ -4,3 +4,11 @@
     margin: 80px auto;
     color: royalblue;
 }
+
+.cardContainer {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}

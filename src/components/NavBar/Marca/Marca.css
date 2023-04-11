@@ -1,0 +1,52 @@
+.marca {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    box-shadow: grey 0px 5px 15px;
+    flex-wrap: wrap;
+}
+
+.marca .logo {
+    display: none;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.marca .logo img {
+    width: 50px;
+}
+
+.titulo {
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.titulo p {
+    color: bisque;
+    margin: 0;
+    text-align: center;
+}
+
+.titulo p:first-of-type {
+    max-height: 55px;
+    font-size: 50px;
+    color: white;
+}
+
+.logo {
+    width: 70px;
+}
+
+@media(min-width:992px){
+    .marca {
+        padding: 30px 0;
+        height: 150px;
+        text-align: center;
+    }
+    .marca .logo {
+        display: flex;
+    }
+}

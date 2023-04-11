@@ -1,0 +1,36 @@
+[{
+    "title": "MATE",
+    "imgUrl": "https://tradicionesargentinas.com/wp-content/uploads/2021/10/4220-scaled.jpg",
+    "description": "A",
+    "price": 1500,
+    "id": 0
+  },
+  {
+    "title": "MATE",
+    "imgUrl": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/606/190/products/1bbc7cf6-0d44-4070-b47d-ddf861881500-2a5a805eefa499ebe316511183753589-640-0.jpeg",
+    "description": "B",
+    "price": 2000,
+    "id": 1
+  },
+  {
+    "title": "MATE",
+    "imgUrl": "https://tienda.notevitricampeon.com/wp-content/uploads/2021/07/DSC_1927-1.jpg",
+    "description": "C",
+    "price": 2500,
+    "id": 2
+  },
+  {
+    "title": "MATE",
+    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
+    "description": "D",
+    "price": 3000,
+    "id": 3
+  },
+  {
+    "title": "MATE",
+    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
+    "description": "D",
+    "price": 3000,
+    "id": 4
+}]
+ 
