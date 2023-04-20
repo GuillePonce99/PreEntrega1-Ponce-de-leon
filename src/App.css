@@ -51,3 +51,34 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.detallesCart {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.detallesCart .card{
+  margin: 0 auto;
+  min-height: 650px;
+}
+
+.detallesCart .card .card-body button{
+  margin: 0 auto;
+  width: 150px;
+} 
+
+.btnVolver {
+  margin: 20px auto;
+}
+
+.btnVolver a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.btnVolver a:hover {
+  color: black
+}

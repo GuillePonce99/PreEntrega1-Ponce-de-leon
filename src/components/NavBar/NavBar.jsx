@@ -3,11 +3,11 @@ import Marca from './Marca/Marca';
 import Menu from './Menu/Menu';
 
 
-function NavBar() {
+function NavBar({countProducts}) {
 
   return (
     <header>
-      <Marca/>
+      <Marca countProducts={countProducts}/>
       <Menu/>
     </header>
   );

@@ -1,4 +1,34 @@
 .card {
     text-align: center;
     margin: 20px;
+    row-gap: 50px;
+}
+
+.card:hover {
+    border: bisque solid 2px;
+}
+
+.card img {
+    height: 250px;
+    object-fit: contain;
+}
+
+.navLinkA{
+    text-decoration-line: none;    
+}
+
+.btn-custom {
+    background-color: bisque;
+    border: 1px solid;
+}
+
+.btn-custom:hover {
+    background-color: bisque;
+    border: 2px solid;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

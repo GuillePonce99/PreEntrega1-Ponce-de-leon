@@ -1,3 +1,22 @@
 .logoImg {
    margin-right: 15px;
 }
+
+.shopContainer {
+   display: flex;
+   align-items: center;
+}
+
+.shopContainer p {
+   margin-top: 1px;
+   font-size: 17px;
+   font-weight: bolder;
+}
+
+.counterContainer {
+   width: 28px;
+   height: 28px;
+   background-color:bisque;
+   border-radius: 5px;
+   color: black;
+}

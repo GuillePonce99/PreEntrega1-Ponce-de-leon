@@ -12,3 +12,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly; 
 }
+
+.totalCount {
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}

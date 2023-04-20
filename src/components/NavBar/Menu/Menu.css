@@ -11,12 +11,18 @@
 .nav-item {
     text-align: center;
     margin: 5px 30px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-item a {
     text-decoration: none;
     color: black;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.nav-item .active {
+    color: rgb(161, 139, 112);
 }
 
 .dropdown-menu {
@@ -33,6 +39,7 @@
     .nav-item {
         text-align: center;
         margin: 15px 30px;
+        
     }
     
     footer .siguenos {
