@@ -4,7 +4,7 @@ import CartWidget from "../../CartWidget/CartWidget.jsx"
 import './Marca.css'
 import { NavLink } from 'react-router-dom'
 
-const Marca = ({ countProducts }) => {
+const Marca = ({ car }) => {
     return (
         <div className="marca">
             <div className="logo">
@@ -16,7 +16,8 @@ const Marca = ({ countProducts }) => {
                     <p>Mates y accesorios</p>
                 </div>
             </NavLink>
-            <CartWidget countProducts={countProducts} />
+            <NavLink to="productos/car"><CartWidget car={car} /></NavLink>
+            
         </div>
     )
 }

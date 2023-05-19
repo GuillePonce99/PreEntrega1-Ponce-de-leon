@@ -6,25 +6,29 @@ import { useState } from "react";
 import ProductosDetalles from "./views/ProductosDetalles";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ProductosCategoria from "./views/ProductosCategoria";
+import GeneralContext from "./context/GeneralContext";
+import CarProductView from "./views/CarProductView";
 
 
 
 function App() {
-  const [countProducts, setCountProducts] = useState(0)
-  const handlesUpdate = () => {
-    setCountProducts(countProducts + 1)
+  const [car, setCar] = useState([])
+  const addToCar = (item) => {
+    setCar([...car,item])
   };
 
   return (
-    <BrowserRouter>
-      <NavBar countProducts={countProducts} setCountProducts={setCountProducts} />
-      <Routes>
-        <Route path="/productos/detalles/:idProducts" element= {<ProductosDetalles handlesUpdate={handlesUpdate}/>}></Route>
-        <Route path="/" element={<ItemListContainer  handlesUpdate={handlesUpdate}/>} ></Route>
-        <Route path="/category/:idCategory" element={<ProductosCategoria  handlesUpdate={handlesUpdate}/>} ></Route>
-        
-      </Routes>
-    </BrowserRouter>
+    <GeneralContext.Provider value={{ car, addToCar }}>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/productos/detalles/:idProducts" element={<ProductosDetalles/>}></Route>
+          <Route path="/" element={<ItemListContainer/>} ></Route>
+          <Route path="/category/:idCategory" element={<ProductosCategoria/>} ></Route>
+          <Route path="/productos/car" element={<CarProductView/>} ></Route>
+        </Routes>
+      </BrowserRouter>
+    </GeneralContext.Provider>
   );
 }
 

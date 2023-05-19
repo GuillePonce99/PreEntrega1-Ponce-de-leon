@@ -2,11 +2,15 @@ import React from 'react'
 import "./ItemListContainer.css"
 import Products from '../Products/Products'
 import useFetch from '../../utilities/useFetch'
+import GeneralContext from '../../context/GeneralContext'
+import { useContext } from 'react'
+import useFirestore from '../../utilities/useFirestore'
 const urlApi = 'https://fakestoreapi.com/products';
+const nameCollection = "productos"
 
-const ItemListContainer = ({ handlesUpdate }) => {
-
-  const { data, loading } = useFetch(urlApi);
+const ItemListContainer = () => {
+  const {addToCar} = useContext(GeneralContext)
+  const [ data, loading ] = useFirestore(nameCollection);
 
   return (
     <div className='cardContainer'>
@@ -15,7 +19,7 @@ const ItemListContainer = ({ handlesUpdate }) => {
       ) : (
         data.map((product) => {
           return (
-            <Products key={product.id} data={product} handlesUpdate={handlesUpdate} />
+            <Products key={product.id} data={product} addToCar={addToCar} />
           )
         })
       )

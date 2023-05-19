@@ -9,8 +9,8 @@
 }
 
 .card img {
-    height: 250px;
-    object-fit: contain;
+    height: 350px;
+    object-fit: cover;
 }
 
 .navLinkA{

@@ -57,8 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: start;
-}
+} 
 
 .detallesCart .card{
   margin: 0 auto;

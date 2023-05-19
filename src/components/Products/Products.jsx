@@ -6,13 +6,13 @@ import { NavLink } from 'react-router-dom';
 
 
 function Products(props) {
-  const { data, handlesUpdate } = props;
-  const { title, image, price, description, id } = data
+  const { data, addToCar } = props;
+  const { title, imgUrl, price, description, id } = data
   const [stock, setStock] = useState(10)
   const handlesBtn = () => {
     if (stock > 0) {
       setStock(stock - 1)
-      handlesUpdate()
+      addToCar(data)
     } else {
       alert("no hay stock")
     }
@@ -20,7 +20,7 @@ function Products(props) {
   
   return (
     <Card style={{ width: '20rem' }}>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top" src={imgUrl} />
       <NavLink className="navLinkA" to={`/productos/detalles/${id}`}>
         ➕
       </NavLink>

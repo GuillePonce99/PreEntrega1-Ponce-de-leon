@@ -1,36 +1,42 @@
 [{
-    "title": "MATE",
-    "imgUrl": "https://tradicionesargentinas.com/wp-content/uploads/2021/10/4220-scaled.jpg",
+    "id": 0,
+    "category": "Mates",
+    "title": "MATE1",
     "description": "A",
     "price": 1500,
-    "id": 0
+    "imgUrl": "https://tradicionesargentinas.com/wp-content/uploads/2021/10/4220-scaled.jpg",
+
   },
   {
-    "title": "MATE",
-    "imgUrl": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/606/190/products/1bbc7cf6-0d44-4070-b47d-ddf861881500-2a5a805eefa499ebe316511183753589-640-0.jpeg",
+    "id": 1,
+    "category": "Mates",
+    "title": "MATE2",
     "description": "B",
     "price": 2000,
-    "id": 1
+    "imgUrl": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/606/190/products/1bbc7cf6-0d44-4070-b47d-ddf861881500-2a5a805eefa499ebe316511183753589-640-0.jpeg",
   },
   {
-    "title": "MATE",
-    "imgUrl": "https://tienda.notevitricampeon.com/wp-content/uploads/2021/07/DSC_1927-1.jpg",
+    "id": 2,
+    "category": "Termos",
+    "title": "MATE3",
     "description": "C",
     "price": 2500,
-    "id": 2
+    "imgUrl": "https://tienda.notevitricampeon.com/wp-content/uploads/2021/07/DSC_1927-1.jpg",
   },
   {
-    "title": "MATE",
-    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
+    "id": 3,
+    "category": "Termos",
+    "title": "MATE4",
     "description": "D",
     "price": 3000,
-    "id": 3
+    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
   },
   {
-    "title": "MATE",
-    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
+    "id": 4,
+    "category": "Otros",
+    "title": "MATE5",
     "description": "D",
     "price": 3000,
-    "id": 4
+    "imgUrl": "https://d22fxaf9t8d39k.cloudfront.net/ba1e77d8d438601b898ab1f8395f70d19a15ddbe5b9c202d0eaa4e1b893dd4f619762.jpeg",
 }]
  
