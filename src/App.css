@@ -81,3 +81,76 @@ body {
 .btnVolver a:hover {
   color: black
 }
+
+.carContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.car {
+  display: flex;
+  justify-content: center;
+}
+
+.car .cardCar {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.car .cardCar img {
+  width: 300px;
+}
+
+.car .cardCar .navLinkA {
+  margin: auto 70px;
+}
+
+.noProducts{
+  text-align: center;
+  font-size: 35px;
+  margin: 100px;
+}
+
+.row {
+  font-size: 30px;
+  margin: 100px auto;
+}
+
+.cartWidgetContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.misCompras {
+  color: bisque;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+  border: 1px solid bisque;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.cartWidgetContainer a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.misComprasCard {
+  height: 200px;
+}
+
+.misComprasContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.formCar {
+  margin: 50px auto;
+  width: 500px;
+}

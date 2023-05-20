@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
-import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
+import { useState, useEffect, useMemo } from 'react'
+import { collection, doc, getDoc, getDocs, getFirestore, where, limit, query } from "firebase/firestore";
+
 
 const initialState = {
     loading: true,
@@ -7,8 +8,21 @@ const initialState = {
     data:[],
 };
 
-const useFirestore = (nameCollection, documentId) => {
+const filtersFuntions = {
+    where,
+    limit,
+};
+
+const useFirestore = ( {nameCollection="", documentId, filters} ) => {
     const [state, setState] = useState(initialState);
+    
+    const listFilters = useMemo(()=>{
+        return Object.keys(filters || {}).map((key) => {
+            const _filter = filtersFuntions[key];
+            const [field, operator, value] = filters[key];
+            return _filter(field,operator,value);
+        });
+    },[filters]);
     
     useEffect(() => {
         const db = getFirestore();
@@ -16,25 +30,26 @@ const useFirestore = (nameCollection, documentId) => {
             getDoc(doc(db, nameCollection, documentId)).then((snapshot)=> {
                 if (snapshot.exists()) {
                     const _data = snapshot.data();
+                    _data["id"] = documentId;
                     setState({...state,data: _data, loading: false});
                 }
             });
         } else if (nameCollection){
-            getDocs(collection(db, nameCollection)).then((snapshot)=>{
+            const _query = query(collection(db, nameCollection), ...listFilters);
+            getDocs(_query).then((snapshot)=>{
                 const _data = snapshot.docs.map((doc)=> {
                     const item = doc.data();
-                    item ["id"] = doc.id;
+                    item["id"] = doc.id;
                     return item;
-                    console.log(snapshot);
                 });
-                setState({...state,data: _data, loading: false})
+                setState({...state,data: _data, loading: false});
             });
+        }     
+    }, [nameCollection, documentId, listFilters]);
 
-        }
-    }, [nameCollection, documentId]);
-    
     return [ state.data, state.loading, state.response ]
     
+
 
 };
 

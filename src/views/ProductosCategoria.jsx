@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useContext, useMemo } from 'react'
 import { useParams } from 'react-router-dom';
-import { useContext } from 'react';
 import useFetch from '../utilities/useFetch';
+import useFirestore from '../utilities/useFirestore';
 import Products from '../components/Products/Products';
 import GeneralContext from '../context/GeneralContext';
+const nameCollection = "productos";
 
 const ProductosCategoria = () => {
   const { idCategory } = useParams();
-  const [ data ] = useFetch(`https://fakestoreapi.com/products/category/${idCategory}`);
+
+  const options = useMemo(()=> {
+    const _withFilters = {nameCollection, filters: {where: ["category","==",idCategory]}};
+    const _outFilters= {nameCollection};
+    return idCategory ? _withFilters : _outFilters;
+  },[idCategory]);
+
+  const [ data ] = useFirestore(options);
+
   const {addToCar} = useContext(GeneralContext)
   return (
     <div className='cardContainer'>{
       data.map((product) => {
         return (
-          <Products key={product.id} data={product}  addToCar={addToCar} />
+          <Products showInfo key={product.id} data={product}  addToCar={addToCar} />
         )
       })
     }

@@ -17,7 +17,6 @@ const Marca = ({ car }) => {
                 </div>
             </NavLink>
             <NavLink to="productos/car"><CartWidget car={car} /></NavLink>
-            
         </div>
     )
 }

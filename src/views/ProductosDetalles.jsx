@@ -2,16 +2,16 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useParams, NavLink } from 'react-router-dom';
-import useFetch from '../utilities/useFetch';
 import ".././App.css"
 import { useContext } from 'react';
 import GeneralContext from '../context/GeneralContext';
-const urlApi = 'https://fakestoreapi.com/products';
+import useFirestore from '../utilities/useFirestore';
+const nameCollection = "productos"
 
 const ProductosDetalles = () => {
-    const { idProducts } = useParams();
-    const [ data ] = useFetch(`${urlApi}/${idProducts}`);
-    const { title, image, price, description } = data
+    const { idProducts: documentId } = useParams();
+    const [ data ] = useFirestore({nameCollection,documentId});
+    const { title, imgUrl, price, description } = data
     const { addToCar } = useContext(GeneralContext)
     const handlesBtn = () => {
         addToCar(data);
@@ -22,8 +22,8 @@ const ProductosDetalles = () => {
             <div className='detallesCart'>
                 <Button className='btnVolver' variant='custom'> <NavLink to="/">VOLVER</NavLink></Button>
 
-                <Card style={{ width: '40rem' }}>
-                    <Card.Img variant="top" src={image} />
+                <Card style={{ width: '25rem' }}>
+                    <Card.Img variant="top" src={imgUrl} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>

@@ -32,3 +32,27 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.btn-groups {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-amount {
+    background-color: bisque;
+    width: 35px;
+    height: 35px;
+    border: solid gray 1px;
+    border-radius: 10px ;
+    margin: 5px;
+    margin-bottom: 20px;
+
+}
+
+.btn-groups p {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 15px;
+    font-weight: bold;
+}
